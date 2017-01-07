@@ -12,6 +12,28 @@ const android_routes = require('./routes/android');
 const app = express();
 const mongodb_uri = process.env.MONGODB_URI;
 
+const Master = require('./models/master');
+
+
+// Test Master
+
+// var master = new Master({
+//   username: 'testMaster',
+//   password: 'gchq9er1'
+// });
+//
+// master.save((err) => {
+//
+//   if(err) throw err;
+//
+//   Master.findOne({username: 'testMaster'}, (err, master) => {
+//
+//     if(err) throw err;
+//     console.log(master.validPassword('gchq9er1'));
+//   });
+//
+// });
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
